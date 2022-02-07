@@ -1,0 +1,81 @@
+.register {
+    margin-top: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn .2s ease-in-out;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.register-form-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color: var(--color-primary);
+    padding: 2rem 3rem;
+    width: 30rem;
+    border-radius: 40px;
+}
+
+.register-form-input label {
+    font-size: 2rem;
+    font-family: Righteous;
+    color: white;
+}
+
+.register-form-input input {
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    height: 3rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    padding: 1rem;
+}
+
+.register-form input[type="submit"] {
+    border: none;
+    border-radius: 20px;
+    font-size: 2rem;
+    font-family: Righteous;
+    color: white;
+    padding: .5rem;
+    margin: 2rem 0;
+    width: 15rem;
+    background-color: var(--blue-button);
+    cursor: pointer;
+    transition: .2s all ease-in-out;
+}
+
+.register-form input[type="submit"]:active {
+    transform: scale(.8);
+}
+
+.register-form p {
+    font-size: 1.5rem;
+    font-family: Montserrat Light;
+    color: var(--dark-text);
+    cursor: pointer;
+}
+
+.register-form p span:hover {
+    text-decoration: underline;
+}
+
+.register-form p span:active {
+    color: var(--grey-text);
+}
+
+.register-logo {
+    position: absolute;
+    width: 10rem;
+    bottom: 5rem;
+    left: 5rem;
+}

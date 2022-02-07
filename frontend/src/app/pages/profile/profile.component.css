@@ -1,0 +1,137 @@
+.profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.provider {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 3rem;
+}
+
+.provider img {
+    width: 30rem;
+    margin-right: 2rem;
+}
+
+.provider-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.provider-info div {
+    display: flex;
+    align-items: flex-end;
+}
+
+.provider-info div h1 {
+    font-family: Montserrat;
+    font-weight: Bold;
+    color: var(--color-primary);
+    margin-right: 1.5rem;
+}
+
+.provider-info div p {
+    font-family: Montserrat;
+    font-size: 1.2rem;
+    color: var(--color-primary);
+}
+
+.provider-info > p {
+    font-family: Montserrat;
+    font-size: 1.3rem;
+    color: var(--dark-text);
+}
+
+.profile-details {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.profile-details h1 {
+    font-family: Righteous;
+    font-size: 2.5rem;
+    color: var(--dark-text);
+}
+
+.profile-details img {
+    width: 84px;
+}
+
+.profile-details p {
+    font-family: Montserrat;
+    color: var(--grey-text);
+    margin-top: .3rem;
+}
+
+.profile-details div > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.profile-skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.profile-offers {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.profile-other {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.profile-history {
+    flex: 3;
+    background-color: var(--color-primary);
+    color: white;
+    padding: 2rem;
+    border-radius: 30px;
+    width: 20rem;
+}
+
+.profile-history h1 {
+    color: white;
+}
+
+.profile-history ul {
+    list-style: none;
+    font-family: Nunito;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    font-size: 1.1rem;
+}
+
+.profile-other button {
+    flex: 1;
+    border: none;
+    border-radius: 40px;
+    background-color: var(--blue-button);
+    color: white;
+    width: 100%;
+    font-family: Nunito;
+    font-size: 2rem;
+    transition: all .2s ease-in-out;
+}
+
+.profile-other button:active {
+    transform: scale(0.9);
+}

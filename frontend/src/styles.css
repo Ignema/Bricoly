@@ -1,1 +1,39 @@
-/* You can add global styles to this file, and also import other style files */
+:root{
+    --color-primary: #A3B4F2;
+    --dark-text: #5C5656;
+    --grey-text: #7A7272;
+    --blue-button: #4668E0;
+    --grey-button: #C4C4C4;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none !important;
+    color: inherit;
+}
+
+a:hover {
+    color: inherit;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }    
+}

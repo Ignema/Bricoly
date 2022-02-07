@@ -1,0 +1,36 @@
+.about {
+    background-image: url('/assets/business.jpg');
+    background-size: contain;
+    overflow-y: scroll;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: CALC(100vh - 7rem);
+    animation: fadeIn .4s ease-in-out;
+}
+
+.about-main {
+    background-color: var(--blue-button);
+    opacity: .9;
+    width: 60%;
+    padding: 3rem 5rem;
+    color: white;
+    margin: 5rem 0;
+    border-radius: 20px;
+}
+
+.about-main h1 {
+    text-align: center;
+    font-family: Montserrat ExtraBold;
+    font-size: 5rem;
+    margin-bottom: 5rem;
+}
+
+.about-main p {
+    font-family: Nunito Light;
+    font-size: 1.8rem;
+}
+
+.about::-webkit-scrollbar {
+    width: 0;
+}

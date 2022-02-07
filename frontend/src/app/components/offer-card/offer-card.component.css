@@ -1,0 +1,35 @@
+.offer-card {
+    background-color: var(--color-primary);
+    border-radius: 20px;
+    height: 226px;
+    width: 230px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+    animation: zoomIn .4s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+.offer-card:active {
+    transform: scale(.9);
+}
+
+.offer-card-name {
+    margin: 1rem 0 .5rem 0;
+    font-family: Nunito SemiBold;
+    font-size: 1.2rem;
+}
+
+.offer-card-provider {
+    font-size: 1.2rem;
+    margin: .5rem 0 0 0;
+    font-family: Montserrat ExtraBold;
+}
+
+.offer-card-price {
+    margin: 0;
+    font-family: Montserrat;
+}

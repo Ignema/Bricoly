@@ -1,0 +1,96 @@
+.login {
+    margin-top: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn .2s ease-in-out;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.login-form-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color: var(--color-primary);
+    padding: 2rem 3rem;
+    width: 30rem;
+    border-radius: 40px;
+}
+
+.login-form-input label {
+    font-size: 2rem;
+    font-family: Righteous;
+    color: white;
+}
+
+.login-form-input input {
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    height: 3rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    padding: 1rem;
+}
+
+.login-form-input p.forgot-password {
+    font-size: 1.5rem;
+    font-family: Montserrat Light;
+    color: white;
+    cursor: pointer;
+}
+
+.login-form-input p.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.login-form-input p.forgot-password:active {
+    color: var(--grey-button);
+}
+
+.login-form input[type="submit"] {
+    border: none;
+    border-radius: 20px;
+    font-size: 2rem;
+    font-family: Righteous;
+    color: white;
+    padding: .5rem;
+    margin: 2rem 0;
+    width: 15rem;
+    background-color: var(--blue-button);
+    cursor: pointer;
+    transition: .2s all ease-in-out;
+}
+
+.login-form input[type="submit"]:active {
+    transform: scale(.8);
+}
+
+.login-form p {
+    font-size: 1.5rem;
+    font-family: Montserrat Light;
+    color: var(--dark-text);
+    cursor: pointer;
+}
+
+.login-form p span:hover {
+    text-decoration: underline;
+}
+
+.login-form p span:active {
+    color: var(--grey-text);
+}
+
+.login-logo {
+    position: absolute;
+    width: 10rem;
+    bottom: 5rem;
+    left: 5rem;
+}

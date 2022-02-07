@@ -1,0 +1,183 @@
+.offer {
+    display: flex;
+    height: CALC(100vh - 7rem);
+    animation: fadeIn .3s ease-in-out;
+}
+
+.offer-main {
+    flex: 2;
+    border: solid var(--color-primary) 5px;
+    border-radius: 40px;
+    margin: 1rem 0 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.offer-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.offer-name > img {
+    margin-right: 5rem;
+}
+
+.offer-name div h1 {
+    font-size: 4.6rem;
+    font-family: Righteous;
+    color: var(--dark-text);
+}
+
+.offer-name div ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+    margin-bottom: .5rem;
+}
+
+.offer-name div ul li {
+    margin-right: 1rem;
+}
+
+.offer-name div p {
+    font-size: 1.2rem;
+    font-family: Nunito;
+    color: var(--grey-text);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.offer-name div p span {
+    cursor: pointer;
+}
+
+.offer-name div p span:hover {
+    text-decoration: underline;
+}
+
+.offer-name div p span:active {
+    color: var(--color-primary);
+}
+
+.offer-name div p span:nth-child(2) {
+    margin: 0 .3rem .5rem .3rem;
+}
+
+.offer-description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.offer-description p {
+    width: 60rem;
+    font-family: Nunito;
+    color: var(--dark-text);
+    font-size: 1.6rem;
+}
+
+.offer-extra {
+    display: flex;
+    justify-content: space-around;
+    font-family: Righteous;
+    color: var(--dark-text);
+    font-size: 2rem;
+}
+
+.offer-extra div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.offer-extra-price img {
+    margin-bottom: .5rem;
+}
+
+.offer-secondary {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+.offer-details {
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--color-primary);
+    border-radius: 40px;
+    color: white;
+}
+
+.offer-details h1 {
+    font-family: Nunito;
+    font-size: 3rem;
+    margin: 3rem 0;
+}
+
+.offer-details-date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.offer-details-availability {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 1rem 0 0 1rem;
+}
+
+.offer-details-availability h3 {
+    font-family: Righteous;
+    font-size: 1.6rem;
+}
+
+.offer-details-availability p {
+    font-family: Nunito;
+    font-size: 1.2rem;
+}
+
+.offer-details-extra span {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 10rem;
+    margin-bottom: 3rem;
+    font-family: Righteous;
+    font-size: 1.3rem;
+}
+
+.offer-secondary-button {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.offer-secondary-button button {
+    width: 100%;
+    height: 90%;
+    border: none;
+    border-radius: 50px;
+    background-color: var(--blue-button);
+    font-family: Nunito;
+    font-size: 3rem;
+    color: white;
+    font-weight: bolder;
+    transition: all .2s ease-in-out;
+}
+
+.offer-secondary-button button:active {
+    transform: scale(.8);
+}
