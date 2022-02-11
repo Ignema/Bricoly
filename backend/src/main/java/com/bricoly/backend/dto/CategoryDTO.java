@@ -1,8 +1,13 @@
 package com.bricoly.backend.dto;
 
+import com.bricoly.backend.domain.Offer;
+
+import java.util.List;
+
 public class CategoryDTO extends AbstractDTO<Long> {
     private Long category_id;
     private String category_name;
+    private List<Offer> offers;
 
     public CategoryDTO() {
     }
@@ -21,5 +26,13 @@ public class CategoryDTO extends AbstractDTO<Long> {
 
     public String getCategory_name() {
         return this.category_name;
+    }
+
+    public void setOffers(java.util.List<com.bricoly.backend.domain.Offer> offers) {
+        this.offers = offers;
+    }
+
+    public java.util.List<com.bricoly.backend.domain.Offer> getOffers() {
+        return this.offers;
     }
 }

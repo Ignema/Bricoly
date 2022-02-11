@@ -10,7 +10,7 @@ public class UserDTO extends AbstractDTO<Long> {
     private String last_name;
     private String email;
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
-    private LocalDateTime date;
+    private LocalDateTime birthday;
     private String location;
     private String password;
 
@@ -49,12 +49,12 @@ public class UserDTO extends AbstractDTO<Long> {
         return this.email;
     }
 
-    public void setDate(java.time.LocalDateTime date) {
-        this.date = date;
+    public void setBirthday(java.time.LocalDateTime birthday) {
+        this.birthday = birthday;
     }
 
-    public java.time.LocalDateTime getDate() {
-        return this.date;
+    public java.time.LocalDateTime getBirthday() {
+        return this.birthday;
     }
 
     public void setLocation(String location) {

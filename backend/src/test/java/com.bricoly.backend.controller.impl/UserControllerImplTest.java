@@ -1,9 +1,6 @@
 package com.bricoly.backend.controller.impl;
 
-import com.bricoly.backend.controller.impl.CustomUtils;
-import com.bricoly.backend.controller.impl.UserControllerImpl;
 import com.bricoly.backend.domain.User;
-import com.bricoly.backend.dto.UserDTO;
 import com.bricoly.backend.mapper.ReferenceMapper;
 import com.bricoly.backend.mapper.UserMapper;
 import com.bricoly.backend.service.UserService;
@@ -14,7 +11,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.ArgumentMatchers;
 import org.mockito.InjectMocks;
-import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -24,11 +20,8 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
-import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-
-import java.util.Arrays;
 
 @SpringBootTest
 @AutoConfigureMockMvc

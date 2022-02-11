@@ -2,6 +2,8 @@ package com.bricoly.backend.service.impl;
 
 import com.bricoly.backend.dao.SkillRepository;
 import com.bricoly.backend.domain.Skill;
+import com.bricoly.backend.dto.SkillDTO;
+import com.bricoly.backend.mapper.SkillMapper;
 import com.bricoly.backend.service.SkillService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;

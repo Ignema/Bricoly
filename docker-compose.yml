@@ -1,0 +1,37 @@
+version: '2'
+
+services:
+    frontend:
+        image: 'ignema/bricoly-frontend:1.0'
+        build: 
+            context: ./frontend/
+        ports: 
+            - 80:80
+        container_name: bricoly_frontend
+    backend:
+        image: 'ignema/bricoly-backend:1.0'
+        build:
+            context: ./backend/
+        ports: 
+            - 8080:8080
+        container_name: bricoly_backend
+        depends_on:
+            - db
+        environment:
+            - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/bricoly
+            - SPRING_DATASOURCE_USERNAME=bricoly
+            # Make sure to change this in prod!!
+            - SPRING_DATASOURCE_PASSWORD=12345
+            - SPRING_JPA_HIBERNATE_DDL_AUTO=create-drop # Needs to be set to 'update' in prod
+            ###################################
+          
+    db:
+        image: 'postgres:13.1-alpine'
+        container_name: bricoly_db
+        ports: 
+            - 5432:5432
+        environment:
+            - POSTGRES_USER=bricoly
+            # Make sure to change this in prod!!
+            - POSTGRES_PASSWORD=12345
+            ###################################

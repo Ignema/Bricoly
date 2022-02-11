@@ -1,11 +1,8 @@
 package com.bricoly.backend.dto;
 
-import com.bricoly.backend.domain.Provider;
-
 public class DayDTO extends AbstractDTO<Long> {
     private Long day_id;
     private String name;
-    private Provider provider;
 
     public DayDTO() {
     }
@@ -24,13 +21,5 @@ public class DayDTO extends AbstractDTO<Long> {
 
     public String getName() {
         return this.name;
-    }
-
-    public void setProvider(Provider provider) {
-        this.provider = provider;
-    }
-
-    public Provider getProvider() {
-        return this.provider;
     }
 }

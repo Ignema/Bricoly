@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  currentPanel: string = 'profile';
+
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
+
+  public selectPanel(panel: string): void {
+    this.currentPanel = panel;
+  }
+
+  public logout() {
+        this.router.navigate(['/']);
+  };
 
 }

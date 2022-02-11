@@ -1,17 +1,14 @@
 package com.bricoly.backend.dto;
 
-import org.springframework.format.annotation.DateTimeFormat;
+import com.bricoly.backend.domain.Job;
+import com.bricoly.backend.domain.User;
 
-import java.time.LocalDateTime;
+import java.util.List;
 
 public class CustomerDTO extends AbstractDTO<Long> {
     private Long customer_id;
-    private String first_name;
-    private String last_name;
-    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
-    private LocalDateTime date;
-    private String location;
-    private String password;
+    private List<Job> jobs;
+    private User user;
 
     public CustomerDTO() {
     }
@@ -24,43 +21,19 @@ public class CustomerDTO extends AbstractDTO<Long> {
         return this.customer_id;
     }
 
-    public void setFirst_name(String first_name) {
-        this.first_name = first_name;
+    public void setJobs(java.util.List<com.bricoly.backend.domain.Job> jobs) {
+        this.jobs = jobs;
     }
 
-    public String getFirst_name() {
-        return this.first_name;
+    public java.util.List<com.bricoly.backend.domain.Job> getJobs() {
+        return this.jobs;
     }
 
-    public void setLast_name(String last_name) {
-        this.last_name = last_name;
+    public void setUser(User user) {
+        this.user = user;
     }
 
-    public String getLast_name() {
-        return this.last_name;
-    }
-
-    public void setDate(java.time.LocalDateTime date) {
-        this.date = date;
-    }
-
-    public java.time.LocalDateTime getDate() {
-        return this.date;
-    }
-
-    public void setLocation(String location) {
-        this.location = location;
-    }
-
-    public String getLocation() {
-        return this.location;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getPassword() {
-        return this.password;
+    public User getUser() {
+        return this.user;
     }
 }

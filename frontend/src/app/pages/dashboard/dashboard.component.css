@@ -1,0 +1,101 @@
+.dashboard {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    animation: fadeIn .5s ease-in-out;
+}
+
+.sidebar {
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    background: var(--color-primary);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.sidebar-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar-top h1 {
+    font-size: 2.6rem;
+    font-family: Righteous;
+    color: white;
+}
+
+.sidebar-top ul {
+    list-style: none;
+    text-align: center;
+    color: white;
+    font-size: 1.3rem;
+    font-family: Montserrat;
+}
+
+.sidebar-top ul li {
+    margin: 2rem 0;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    border-radius: 20px;
+}
+
+.sidebar-top ul li:hover {
+    padding: 2rem;
+    background-color: white;
+    color: var(--color-primary);
+}
+
+.sidebar-top ul li:active {
+    transform: scale(0.7);
+}
+
+.sidebar-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar-bottom button {
+    background: white;
+    border: none;
+    color: var(--color-primary);
+    padding: 1.3rem;
+    font-size: 1.6rem;
+    font-family: Nunito ExtraBold;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    border-radius: 20px;
+}
+
+.sidebar-bottom button:active{
+    transform: scale(0.7);
+}
+
+.sidebar-bottom p {
+    margin-top: 2rem;
+    color: white;
+    font-size: .8rem;
+    font-family: Montserrat;
+}
+
+.main {
+    margin-left: 200px;
+    width: calc(100% - 200px);
+    height: 100%;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+app-dashboard-profile, app-dashboard-offers, app-dashboard-jobs {
+    animation: fadeIn .5s ease-in-out;
+}

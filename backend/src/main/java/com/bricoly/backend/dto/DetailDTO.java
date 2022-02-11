@@ -1,11 +1,8 @@
 package com.bricoly.backend.dto;
 
-import com.bricoly.backend.domain.Offer;
-
 public class DetailDTO extends AbstractDTO<Long> {
     private Long detail_id;
     private String name;
-    private Offer offer;
 
     public DetailDTO() {
     }
@@ -24,13 +21,5 @@ public class DetailDTO extends AbstractDTO<Long> {
 
     public String getName() {
         return this.name;
-    }
-
-    public void setOffer(Offer offer) {
-        this.offer = offer;
-    }
-
-    public Offer getOffer() {
-        return this.offer;
     }
 }

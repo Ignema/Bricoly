@@ -1,18 +1,17 @@
 package com.bricoly.backend.dto;
 
-import org.springframework.format.annotation.DateTimeFormat;
+import com.bricoly.backend.domain.*;
 
-import java.time.LocalDateTime;
+import java.util.List;
 
 public class ProviderDTO extends AbstractDTO<Long> {
     private Long provider_id;
-    private String first_name;
-    private String last_name;
-    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
-    private LocalDateTime date;
     private String bio;
-    private String location;
-    private String password;
+    private User user;
+    private List<Day> days;
+    private List<Skill> skills;
+    private List<Offer> offers;
+    private List<Job> jobs;
 
     public ProviderDTO() {
     }
@@ -25,30 +24,6 @@ public class ProviderDTO extends AbstractDTO<Long> {
         return this.provider_id;
     }
 
-    public void setFirst_name(String first_name) {
-        this.first_name = first_name;
-    }
-
-    public String getFirst_name() {
-        return this.first_name;
-    }
-
-    public void setLast_name(String last_name) {
-        this.last_name = last_name;
-    }
-
-    public String getLast_name() {
-        return this.last_name;
-    }
-
-    public void setDate(java.time.LocalDateTime date) {
-        this.date = date;
-    }
-
-    public java.time.LocalDateTime getDate() {
-        return this.date;
-    }
-
     public void setBio(String bio) {
         this.bio = bio;
     }
@@ -57,19 +32,43 @@ public class ProviderDTO extends AbstractDTO<Long> {
         return this.bio;
     }
 
-    public void setLocation(String location) {
-        this.location = location;
+    public void setUser(User user) {
+        this.user = user;
     }
 
-    public String getLocation() {
-        return this.location;
+    public User getUser() {
+        return this.user;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setDays(java.util.List<com.bricoly.backend.domain.Day> days) {
+        this.days = days;
     }
 
-    public String getPassword() {
-        return this.password;
+    public java.util.List<com.bricoly.backend.domain.Day> getDays() {
+        return this.days;
+    }
+
+    public void setSkills(java.util.List<com.bricoly.backend.domain.Skill> skills) {
+        this.skills = skills;
+    }
+
+    public java.util.List<com.bricoly.backend.domain.Skill> getSkills() {
+        return this.skills;
+    }
+
+    public void setOffers(java.util.List<com.bricoly.backend.domain.Offer> offers) {
+        this.offers = offers;
+    }
+
+    public java.util.List<com.bricoly.backend.domain.Offer> getOffers() {
+        return this.offers;
+    }
+
+    public void setJobs(java.util.List<com.bricoly.backend.domain.Job> jobs) {
+        this.jobs = jobs;
+    }
+
+    public java.util.List<com.bricoly.backend.domain.Job> getJobs() {
+        return this.jobs;
     }
 }

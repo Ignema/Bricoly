@@ -1,9 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Mina&display=swap');
+
 :root{
     --color-primary: #A3B4F2;
+    --color-secondary: #B8C7FA;
     --dark-text: #5C5656;
     --grey-text: #7A7272;
     --blue-button: #4668E0;
     --grey-button: #C4C4C4;
+    --red-button: #FC7373;
 }
 
 * {

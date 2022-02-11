@@ -1,9 +1,16 @@
 package com.bricoly.backend.domain;
 
-import javax.persistence.*;
-import lombok.Data;
+import lombok.*;
+import org.hibernate.Hibernate;
 
-@Data
+import javax.persistence.*;
+import java.util.List;
+import java.util.Objects;
+
+@Getter
+@Setter
+@ToString
+@RequiredArgsConstructor
 @Entity(name = "Offer")
 public class Offer {
     @Id
@@ -15,24 +22,33 @@ public class Offer {
     @Column(name = "offer_name", nullable = false, columnDefinition = "TEXT")
     private String offer_name;
 
-    @ManyToOne
-    @JoinTable(name="icon", joinColumns = @JoinColumn(name = "offer_id", referencedColumnName = "offer_id"), inverseJoinColumns = @JoinColumn(name = "icon_id", referencedColumnName = "icon_id"))
-    private Icon icon;
-
     @Column(name = "rating", nullable = false, columnDefinition = "INT")
     private String rating;
 
     @Column(name = "description", nullable = false, columnDefinition = "TEXT")
     private String description;
 
-    @Column(name = "bio", nullable = false, columnDefinition = "INT")
+    @Column(name = "price", nullable = false, columnDefinition = "INT")
     private int price;
 
-    @ManyToOne
-    @JoinTable(name="provider", joinColumns = @JoinColumn(name = "offer_id", referencedColumnName = "offer_id"), inverseJoinColumns = @JoinColumn(name = "provider_id", referencedColumnName = "provider_id"))
-    private Provider provider;
+    @OneToMany
+    @JoinTable(name="detail", joinColumns = @JoinColumn(name = "offer_id", referencedColumnName = "offer_id"), inverseJoinColumns = @JoinColumn(name = "detail_id", referencedColumnName = "detail_id"))
+    private List<Detail> details;
 
-    @ManyToOne
-    @JoinTable(name="category", joinColumns = @JoinColumn(name = "offer_id", referencedColumnName = "offer_id"), inverseJoinColumns = @JoinColumn(name = "category_id", referencedColumnName = "category_id"))
-    private Category category;
+    @OneToMany
+    @JoinTable(name="job", joinColumns = @JoinColumn(name = "offer_id", referencedColumnName = "offer_id"), inverseJoinColumns = @JoinColumn(name = "job_id", referencedColumnName = "job_id"))
+    private List<Job> jobs;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
+        Offer offer = (Offer) o;
+        return offer_id != null && Objects.equals(offer_id, offer.offer_id);
+    }
+
+    @Override
+    public int hashCode() {
+        return getClass().hashCode();
+    }
 }

@@ -2,6 +2,8 @@ package com.bricoly.backend.service.impl;
 
 import com.bricoly.backend.dao.JobRepository;
 import com.bricoly.backend.domain.Job;
+import com.bricoly.backend.dto.JobDTO;
+import com.bricoly.backend.mapper.JobMapper;
 import com.bricoly.backend.service.JobService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;

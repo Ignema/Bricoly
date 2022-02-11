@@ -14,7 +14,11 @@ import { CatalogComponent } from './pages/catalog/catalog.component';
 import { OfferCardComponent } from './components/offer-card/offer-card.component';
 import { OfferComponent } from './pages/offer/offer.component';
 import { ProfileComponent } from './pages/profile/profile.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { DashboardModule } from './pages/dashboard/dashboard.module';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
+import { FormsModule }   from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,13 +32,21 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
     CatalogComponent,
     OfferCardComponent,
     OfferComponent,
-    ProfileComponent,
-    DashboardComponent
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    DashboardModule,
+    FormsModule,
+    HttpClientModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the app is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

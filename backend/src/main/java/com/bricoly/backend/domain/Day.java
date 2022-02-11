@@ -1,9 +1,15 @@
 package com.bricoly.backend.domain;
 
-import javax.persistence.*;
-import lombok.Data;
+import lombok.*;
+import org.hibernate.Hibernate;
 
-@Data
+import javax.persistence.*;
+import java.util.Objects;
+
+@Getter
+@Setter
+@ToString
+@RequiredArgsConstructor
 @Entity(name = "Days")
 public class Day {
     @Id
@@ -15,7 +21,16 @@ public class Day {
     @Column(name = "name", nullable = false, columnDefinition = "TEXT")
     private String name;
 
-    @ManyToOne
-    @JoinTable(name="provider", joinColumns = @JoinColumn(name = "day_id", referencedColumnName = "day_id"), inverseJoinColumns = @JoinColumn(name = "provider_id", referencedColumnName = "provider_id"))
-    private Provider provider;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
+        Day day = (Day) o;
+        return day_id != null && Objects.equals(day_id, day.day_id);
+    }
+
+    @Override
+    public int hashCode() {
+        return getClass().hashCode();
+    }
 }

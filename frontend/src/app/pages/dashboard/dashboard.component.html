@@ -1,1 +1,21 @@
-<p>dashboard works!</p>
+<div class="dashboard">
+    <div class="sidebar">
+        <div class="sidebar-top">
+            <h1>Bricoly</h1>
+            <ul>
+                <li (click)="selectPanel('profile')">Profile</li>
+                <li (click)="selectPanel('offers')">Offers</li>
+                <li (click)="selectPanel('jobs')">Jobs</li>
+            </ul>
+        </div>
+        <div class="sidebar-bottom">
+            <button (click)="logout()">Logout</button>
+            <p>Bricoly &copy; Copyright 2022</p>
+        </div>
+    </div>
+    <div class="main" [ngSwitch]="currentPanel">
+        <app-dashboard-profile *ngSwitchCase="'profile'"></app-dashboard-profile>
+        <app-dashboard-offers *ngSwitchCase="'offers'"></app-dashboard-offers>
+        <app-dashboard-jobs *ngSwitchCase="'jobs'"></app-dashboard-jobs>
+    </div>
+</div>

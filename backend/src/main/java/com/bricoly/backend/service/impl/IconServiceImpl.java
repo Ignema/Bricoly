@@ -2,6 +2,8 @@ package com.bricoly.backend.service.impl;
 
 import com.bricoly.backend.dao.IconRepository;
 import com.bricoly.backend.domain.Icon;
+import com.bricoly.backend.dto.IconDTO;
+import com.bricoly.backend.mapper.IconMapper;
 import com.bricoly.backend.service.IconService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;

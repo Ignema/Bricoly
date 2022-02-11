@@ -2,6 +2,8 @@ package com.bricoly.backend.service.impl;
 
 import com.bricoly.backend.dao.OfferRepository;
 import com.bricoly.backend.domain.Offer;
+import com.bricoly.backend.dto.OfferDTO;
+import com.bricoly.backend.mapper.OfferMapper;
 import com.bricoly.backend.service.OfferService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;

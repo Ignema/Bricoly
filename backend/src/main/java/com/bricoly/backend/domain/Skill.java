@@ -1,9 +1,15 @@
 package com.bricoly.backend.domain;
 
-import javax.persistence.*;
-import lombok.Data;
+import lombok.*;
+import org.hibernate.Hibernate;
 
-@Data
+import javax.persistence.*;
+import java.util.Objects;
+
+@Getter
+@Setter
+@ToString
+@RequiredArgsConstructor
 @Entity(name = "Skill")
 public class Skill {
     @Id
@@ -15,11 +21,16 @@ public class Skill {
     @Column(name = "skill_name", nullable = false, columnDefinition = "TEXT")
     private String skill_name;
 
-    @ManyToOne
-    @JoinTable(name="icon", joinColumns = @JoinColumn(name = "skill_id", referencedColumnName = "skill_id"), inverseJoinColumns = @JoinColumn(name = "icon_id", referencedColumnName = "icon_id"))
-    private Icon icon;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
+        Skill skill = (Skill) o;
+        return skill_id != null && Objects.equals(skill_id, skill.skill_id);
+    }
 
-    @ManyToOne
-    @JoinTable(name="provider", joinColumns = @JoinColumn(name = "skill_id", referencedColumnName = "skill_id"), inverseJoinColumns = @JoinColumn(name = "provider_id", referencedColumnName = "provider_id"))
-    private Provider provider;
+    @Override
+    public int hashCode() {
+        return getClass().hashCode();
+    }
 }

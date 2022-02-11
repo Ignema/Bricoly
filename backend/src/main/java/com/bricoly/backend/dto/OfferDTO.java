@@ -1,18 +1,18 @@
 package com.bricoly.backend.dto;
 
-import com.bricoly.backend.domain.Category;
-import com.bricoly.backend.domain.Icon;
-import com.bricoly.backend.domain.Provider;
+import com.bricoly.backend.domain.Detail;
+import com.bricoly.backend.domain.Job;
+
+import java.util.List;
 
 public class OfferDTO extends AbstractDTO<Long> {
     private Long offer_id;
     private String offer_name;
-    private Icon icon;
     private String rating;
     private String description;
     private int price;
-    private Provider provider;
-    private Category category;
+    private List<Detail> details;
+    private List<Job> jobs;
 
     public OfferDTO() {
     }
@@ -31,14 +31,6 @@ public class OfferDTO extends AbstractDTO<Long> {
 
     public String getOffer_name() {
         return this.offer_name;
-    }
-
-    public void setIcon(Icon icon) {
-        this.icon = icon;
-    }
-
-    public Icon getIcon() {
-        return this.icon;
     }
 
     public void setRating(String rating) {
@@ -65,19 +57,19 @@ public class OfferDTO extends AbstractDTO<Long> {
         return this.price;
     }
 
-    public void setProvider(Provider provider) {
-        this.provider = provider;
+    public void setDetails(java.util.List<com.bricoly.backend.domain.Detail> details) {
+        this.details = details;
     }
 
-    public Provider getProvider() {
-        return this.provider;
+    public java.util.List<com.bricoly.backend.domain.Detail> getDetails() {
+        return this.details;
     }
 
-    public void setCategory(Category category) {
-        this.category = category;
+    public void setJobs(java.util.List<com.bricoly.backend.domain.Job> jobs) {
+        this.jobs = jobs;
     }
 
-    public Category getCategory() {
-        return this.category;
+    public java.util.List<com.bricoly.backend.domain.Job> getJobs() {
+        return this.jobs;
     }
 }

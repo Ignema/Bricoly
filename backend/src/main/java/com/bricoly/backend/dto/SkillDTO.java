@@ -1,13 +1,8 @@
 package com.bricoly.backend.dto;
 
-import com.bricoly.backend.domain.Icon;
-import com.bricoly.backend.domain.Provider;
-
 public class SkillDTO extends AbstractDTO<Long> {
     private Long skill_id;
     private String skill_name;
-    private Icon icon;
-    private Provider provider;
 
     public SkillDTO() {
     }
@@ -26,21 +21,5 @@ public class SkillDTO extends AbstractDTO<Long> {
 
     public String getSkill_name() {
         return this.skill_name;
-    }
-
-    public void setIcon(Icon icon) {
-        this.icon = icon;
-    }
-
-    public Icon getIcon() {
-        return this.icon;
-    }
-
-    public void setProvider(Provider provider) {
-        this.provider = provider;
-    }
-
-    public Provider getProvider() {
-        return this.provider;
     }
 }

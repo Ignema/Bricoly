@@ -1,0 +1,151 @@
+.dashboard-profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.dashboard-profile-upper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dashboard-profile-upper h1 {
+    font-size: 4rem;
+    font-family: Mina;
+    font-weight: bolder;
+    color: var(--color-primary);
+    margin: 2rem 0 0 3rem;
+}
+
+.dashboard-profile-upper div button {
+    margin-top: 2rem;
+    margin-right: 1rem;
+    text-align: center;
+    background: var(--blue-button);
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    font-family: Nunito;
+    font-weight: bolder;
+    border-radius: 13px;
+    width: 15rem;
+    height: 4rem;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.dashboard-profile-upper div button:nth-child(2) {
+    background: var(--red-button);
+    width: 15rem;
+}
+
+.dashboard-profile-upper div button:active{
+    transform: scale(0.9);
+}
+
+.dashboard-profile-middle {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+}
+
+.dashboard-profile-middle li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    background-color: var(--color-primary);
+    padding: 1.5rem;
+    border-radius: 13px;
+}
+
+.dashboard-profile-middle li h2 {
+    font-family: Righteous;
+    font-size: 2rem;
+    color: white;
+    margin-left: 3rem;
+}
+
+.dashboard-profile-middle li input {
+    width: 15rem;
+    height: 4rem;
+    border: none;
+    border-radius: 13px;
+    font-family: Nunito;
+    font-size: 1.5rem;
+    color: var(--dark-text);
+    margin-right: 1rem;
+    outline: none;
+    width: 30%;
+    padding: 0 2rem;
+}
+
+.dashboard-profile-lower {
+    display: flex;
+    margin-bottom: 5rem;
+}
+
+.dashboard-profile-lower-skills {
+    background-color: var(--color-primary);
+    margin-left: 2rem;
+    padding: 1rem;
+    border-radius: 13px;
+}
+
+.dashboard-profile-lower-skills h2 {
+    font-family: Righteous;
+    font-size: 3rem;
+    margin: .3rem 0 0 1rem;
+    color: white;
+}
+
+.dashboard-profile-lower-skills div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dashboard-profile-lower-skills div input {
+    height: 4rem;
+    border: none;
+    border-radius: 13px;
+    font-family: Nunito;
+    font-size: 1.5rem;
+    color: var(--dark-text);
+    margin: 1rem;
+    outline: none;
+    padding: 0 2rem;
+}
+
+.dashboard-profile-lower-bio {
+    background-color: var(--color-primary);
+    margin-right: 2rem;
+    margin-left: 5rem;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 13px;
+}
+
+.dashboard-profile-lower-bio h2 {
+    font-family: Righteous;
+    font-size: 3rem;
+    margin: .3rem 0 0 1rem;
+    color: white;
+}
+
+.dashboard-profile-lower-bio textarea {
+    resize: none;
+    border: none;
+    border-radius: 13px;
+    font-family: Nunito;
+    font-size: 1.5rem;
+    color: var(--dark-text);
+    margin: 1rem;
+    outline: none;
+    padding: 1rem 2rem;
+    width: 95%;
+    height: 15rem;
+}

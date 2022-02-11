@@ -1,15 +1,35 @@
 <app-header></app-header>
 
 <div class="register">
-    <form method="POST" action="" class="register-form">
-        <div class="register-form-input">
-            <label for="email">Email</label>
-            <input name="email" type="email">
-            <label for="password">Password</label>
-            <input name="password" type="password">
-            <label for="confirm-password">Confirm Password</label>
-            <input name="confirm-password" type="password">
-        </div>
+    <form #form="ngForm" (ngSubmit)='onNgSubmit(form)' method="POST" action="" class="register-form">
+      <div class="register-form-input">
+        <div class="register-form-input-left">
+          <label for="first-name">First Name</label>
+          <input name="first-name" type="text" ngModel>
+          <label for="last-name">Last Name</label>
+          <input name="last-name" type="text" ngModel>
+          <label for="birthday">Birthday</label>
+          <input name="birthday" type="date" ngModel>
+          <label for="location">Location</label>
+          <input name="location" type="text" ngModel>
+      </div>
+      <div class="register-form-input-right">
+          <label for="email">Email</label>
+          <input name="email" type="email" ngModel>
+          <label for="password">Password</label>
+          <input name="password" type="password" ngModel>
+          <label for="confirm-password">Confirm Password</label>
+          <input name="confirm-password" type="password">
+          <div class="btn-group btn-group-toggle" ngbRadioGroup name="type" ngModel>
+              <label ngbButtonLabel class="btn-primary">
+                <input ngbButton type="radio" value="provider"> Provider
+              </label>
+              <label ngbButtonLabel class="btn-primary">
+                <input ngbButton type="radio" value="customer"> Customer
+              </label>
+            </div>
+      </div>
+      </div>
         <input type="submit" value="Register">
         <p>Already have an account? <span><a routerLink="/login">Login</a></span></p>
     </form>

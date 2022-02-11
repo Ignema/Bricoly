@@ -1,0 +1,78 @@
+.job-item-upper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--color-primary);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.job-item-upper div {
+    display: flex;
+    align-items: center;
+}
+
+.job-item-upper div img {
+    margin-left: 2rem;
+}
+
+.job-item-upper div h1 {
+    font-size: 3rem;
+    font-family: Righteous;
+    font-weight: bolder;
+    color: white;
+    margin: 0 3rem;
+}
+
+.job-item-upper ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.job-item-upper ul li {
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.job-item-lower {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: .5rem;
+}
+
+.job-item-lower button {
+    background-color: var(--blue-button);
+    color: white;
+    font-size: 1.5rem;
+    font-family: Righteous;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    width: 20rem;
+    height: 3rem;
+    margin: .7rem 0 1rem 2rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.job-item-lower button:nth-child(2) {
+    background-color: var(--dark-text);
+}
+
+.job-item-lower button:last-child {
+    background-color: var(--red-button);
+}
+
+.job-item-lower button:active {
+    transform: scale(.7);
+}
+
+.job-item-rule {
+    width: 100%;
+    height: .5px;
+    background-color: var(--color-primary);
+    margin-bottom: 3rem;
+}

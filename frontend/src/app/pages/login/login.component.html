@@ -1,12 +1,12 @@
 <app-header></app-header>
 
 <div class="login">
-    <form method="POST" action="" class="login-form">
+    <form #form="ngForm" (ngSubmit)='onNgSubmit(form)' class="login-form">
         <div class="login-form-input">
             <label for="email">Email</label>
-            <input name="email" type="email">
+            <input name="email" type="email" ngModel>
             <label for="password">Password</label>
-            <input name="password" type="password">
+            <input name="password" type="password" ngModel>
             <p class="forgot-password">Forgot Password?</p>
         </div>
         <input type="submit" value="Login">

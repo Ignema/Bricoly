@@ -62,8 +62,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         // Set permissions on endpoints
         http.authorizeRequests()
                 // Our public endpoints
-                .antMatchers("/**", "/docs", "/swagger-ui/**").permitAll()
-                .antMatchers(HttpMethod.POST, "/login").permitAll()
+                .antMatchers(HttpMethod.POST, "/login", "/register/**").permitAll()
+                .antMatchers("/**").permitAll()
                 // Our private endpoints
                 .anyRequest().authenticated();
 
@@ -79,7 +79,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         UrlBasedCorsConfigurationSource source =
                 new UrlBasedCorsConfigurationSource();
         CorsConfiguration config = new CorsConfiguration();
-        config.setAllowCredentials(true);
         config.addAllowedOrigin("*");
         config.addAllowedHeader("*");
         config.addAllowedMethod("*");
