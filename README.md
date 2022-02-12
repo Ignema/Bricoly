@@ -167,5 +167,7 @@ By the way, here's the original pictures used in the landing page's carousel:
 
 
 <pre>
+<p style="font-size:2rem;" align="center">
 Made with 💙 by Ignema
+</p>
 </pre>
