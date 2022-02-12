@@ -24,7 +24,7 @@ spec:
               value: bricoly
             - name: SPRING_JPA_HIBERNATE_DDL_AUTO
               value: create-drop
-          image: ignema/bricoly-backend:1.0
+          image: ignema/bricoly-backend
           name: bricoly-backend
           ports:
             - containerPort: 8080

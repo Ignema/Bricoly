@@ -15,7 +15,7 @@ spec:
         io.kompose.service: frontend
     spec:
       containers:
-        - image: ignema/bricoly-frontend:1.0
+        - image: ignema/bricoly-frontend
           name: bricoly-frontend
           ports:
             - containerPort: 80
