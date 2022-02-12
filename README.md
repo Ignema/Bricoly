@@ -70,11 +70,11 @@ If kubernetes is more up your alley you can use the k8s config to deploy the clu
 
 The initial designs were made with Figma. You can check them [here](https://www.figma.com/file/ffdOobahZ6Eba8LD0QAEyU/Bricoly?node-id=0%3A1).
 
-## ⚙️ App Overview
-
 <p align="center">
 <img src="https://raw.githubusercontent.com/Ignema/Bricoly/master/res/Screenshots/0.png" />
 </p>
+
+## ⚙️ App Overview
 
 ### 📃 Landing Page
 
