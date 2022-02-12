@@ -1,4 +1,4 @@
-FROM gradle:7.0.2-jdk11
+FROM gradle:7.4-jdk17
 
 VOLUME /tmp
 

@@ -7,4 +7,4 @@ RUN npm run build --prod
 
 # Stage 2: Running artifact
 FROM nginx:alpine
-COPY --from=node /app/dist/demo-app /usr/share/nginx/html
+COPY --from=node /app/dist/frontend /usr/share/nginx/html

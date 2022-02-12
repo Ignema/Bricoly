@@ -40,10 +40,10 @@ There are four things that need to be running in order to execute the whole appl
 If you want to run the containers seperately then you can pull them independently from docker hub like so
     
     # Frontend
-    docker pull ignema/bricoly/frontend:1.0
+    docker pull ignema/bricoly-frontend
 
     # Backend
-    docker pull ignema/bricoly/backend:1.0
+    docker pull ignema/bricoly-backend
 
     # Don't forget to run a postgres container as well!!!
 
@@ -56,6 +56,10 @@ If you want to run the cluster at once, you can simply run this command
 <p align="center">
 <img src="https://raw.githubusercontent.com/Ignema/Bricoly/master/res/SQL/schema.png?token=GHSAT0AAAAAABQA32QBVENAZ6O25U3TLXR6YQQNSZA" />
 </p>
+
+## Mockup Design
+
+The initial designs were made with Figma. You can check them [here](https://www.figma.com/file/ffdOobahZ6Eba8LD0QAEyU/Bricoly?node-id=0%3A1).
 
 ## App Overview
 
