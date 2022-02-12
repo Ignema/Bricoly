@@ -1,4 +1,4 @@
-import { User } from './user.model';
+import { User } from './auth';
 
 describe('User', () => {
   it('should create an instance', () => {

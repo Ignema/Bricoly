@@ -1,0 +1,65 @@
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-primary);
+    border-radius: 40px;
+    color: white;
+    padding: 2rem;
+    transition: all .2s ease-in-out;
+    margin-top: 5rem;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-body label {
+    font-family: Nunito;
+    font-size: 1.2rem;
+    margin: 0 0 1rem 0;
+}
+
+.modal-body input, .modal-body textarea, .modal-body select {
+    width: 10rem;
+    height: 2rem;
+    border-radius: 5px;
+    border: none;
+    font-family: Nunito;
+    font-size: 1.2rem;
+    margin: 0 0 1rem 0;
+    resize: none;
+    outline: none;
+}
+
+.modal-body input {
+    padding: .5rem;
+}
+
+.modal-body textarea {
+    height: 10rem;
+    padding: .5rem;
+}
+
+.modal-footer button {
+    width: 10rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--color-primary);
+    color: white;
+    font-family: Nunito;
+    font-size: 2rem;
+    font-weight: bolder;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 1rem;
+    transition: all .2s ease-in-out;
+}

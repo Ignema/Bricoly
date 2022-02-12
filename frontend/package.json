@@ -28,6 +28,7 @@
     "devexpress-dashboard-angular": "^21.2.5",
     "devextreme": "^21.2.5",
     "devextreme-angular": "^21.2.5",
+    "ngx-simple-modal": "^1.4.17",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

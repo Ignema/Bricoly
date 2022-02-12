@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { Router } from '@angular/router'
-import { User } from '../models/user.model'
+import { Auth } from '../models/auth/auth'
 import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
@@ -14,11 +14,11 @@ export class AuthentificationService {
   private _registerCustomerUrl = `${environment.apiUrl}/register/customer`
   private _loginUrl = `${environment.apiUrl}/login`
 
-  private userSubject: BehaviorSubject<User | null>;
+  private userSubject: BehaviorSubject<Auth | null>;
   public currentUser: Observable<any>;
 
   constructor(private http: HttpClient, private router: Router) {
-    this.userSubject = new BehaviorSubject<User | null>(
+    this.userSubject = new BehaviorSubject<Auth | null>(
       JSON.parse(localStorage.getItem('currentUser') as string)
     );
     this.currentUser = this.userSubject.asObservable();
@@ -38,7 +38,7 @@ export class AuthentificationService {
       .post<any>(this._loginUrl, { email, password })
       .pipe(
         map(({token, type}) => {
-          let user: User = {
+          let user: Auth = {
             email: email,
             token: token,
             type: type
@@ -56,7 +56,7 @@ export class AuthentificationService {
     this.router.navigate(['/']);
   }
 
-  public getCurrentUser(): User | null {
+  public getCurrentUser(): Auth | null {
     return this.userSubject.value;
   }
 }

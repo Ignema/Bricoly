@@ -5,22 +5,13 @@
         <div class="offer-name">
             <img src="assets/icons/box.svg" alt="Offer Image">
             <div>
-                <h1>Offer Name</h1>
+                <h1>{{offer.offer_name}}</h1>
                 <ul>
-                    <li>
+                    <li *ngFor="let item of [].constructor(+offer.rating)">
                         <img src="assets/icons/star-full.svg" alt="Star Full">
                     </li>
-                    <li>
-                        <img src="assets/icons/star-full.svg" alt="Star Full">
-                    </li>
-                    <li>
-                        <img src="assets/icons/star-full.svg" alt="Star Full">
-                    </li>
-                    <li>
-                        <img src="assets/icons/star-empty.svg" alt="Star Full">
-                    </li>
-                    <li>
-                        <img src="assets/icons/star-empty.svg" alt="Star Full">
+                    <li *ngFor="let item of [].constructor(5 - offer.rating)">
+                        <img src="assets/icons/star-empty.svg" alt="Star Empty">
                     </li>
                 </ul>
                 <p>
@@ -31,24 +22,22 @@
             </div>
         </div>
         <div class="offer-description">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultricies consequat eros id lobortis. Nam magna purus, fringilla sit amet tempus sit amet, faucibus in elit. Mauris iaculis, arcu dictum imperdiet molestie, risus libero blandit nisl, sed blandit libero neque quis ante. Morbi sit amet velit fringilla, ultrices sapien et, pharetra velit. Aliquam vitae eleifend neque.
-            </p>
+            <p>{{offer.description}}</p>
         </div>
         <div class="offer-extra">
-            <a routerLink="/profile">
+            <a [routerLink]="['/profile']" [state]="{data: provider}">
                 <div class="offer-extra-provider">
                     <img src="assets/icons/user-blue.svg" alt="Provider Icon">
-                    <p>Provider Name</p>
+                    <p>{{offer.provider_name}}</p>
                 </div>
             </a>
             <div class="offer-extra-location">
                 <img src="assets/icons/location.svg" alt="Location Icon">
-                <p>Location</p>
+                <p>{{provider.user.location}}</p>
             </div>
             <div class="offer-extra-price">
                 <img src="assets/icons/price.svg" alt="Price Icon">
-                <p>Price</p>
+                <p>{{offer.price}}</p>
             </div>
         </div>
     </div>
@@ -59,21 +48,13 @@
                 <img src="assets/icons/calendar.svg" alt="Date Icon">
                 <div class="offer-details-availability">
                     <h3>Availability</h3>
-                    <p>Mon, Tue, Fri, Sun</p>
+                    <p>{{days}}</p>
                 </div>
             </div>
             <div class="offer-details-extra">
-                <span>
+                <span *ngFor="let detail of details">
                     <img src="assets/icons/task.svg" alt="Extra Icon">
-                    <p>Detail #1</p>
-                </span>
-                <span>
-                    <img src="assets/icons/task.svg" alt="Extra Icon">
-                    <p>Detail #2</p>
-                </span>
-                <span>
-                    <img src="assets/icons/task.svg" alt="Extra Icon">
-                    <p>Detail #3</p>
+                    <p>{{detail}}</p>
                 </span>
             </div>
         </div>

@@ -1,0 +1,25 @@
+<div class="modal-content">
+    <div class="modal-header">
+      <h4>{{title || 'Confirm'}}</h4>
+    </div>
+    <div class="modal-body">
+      <p>{{message || 'Are you sure?'}}</p>
+      <label for="offer-name">Offer Name</label>
+      <input type="text" name="offer-name">
+      <label for="description">Description</label>
+      <textarea name="description"></textarea>
+      <label for="price">Price</label>
+      <input type="text" name="price">
+      <label for="category">Category</label>
+      <select name="category">
+        <option value="">Select Category</option>
+        <option value="1">Category 1</option>
+        <option value="2">Category 2</option>
+        <option value="3">Category 3</option>
+        </select>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-danger" (click)="close()" >Cancel</button>
+      <button type="button" class="btn btn-primary" (click)="confirm()">OK</button>
+    </div>
+  </div>

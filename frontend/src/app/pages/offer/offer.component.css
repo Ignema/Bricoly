@@ -74,7 +74,7 @@
 }
 
 .offer-description p {
-    width: 60rem;
+    /* width: 60rem; */
     font-family: Nunito;
     color: var(--dark-text);
     font-size: 1.6rem;
@@ -150,12 +150,16 @@
 
 .offer-details-extra span {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    width: 10rem;
-    margin-bottom: 3rem;
+    /* width: 10rem; */
+    margin: 0 6rem 3rem 6rem;
     font-family: Righteous;
     font-size: 1.3rem;
+}
+
+.offer-details-extra span p {
+    margin: 0 0 0 2rem;
 }
 
 .offer-secondary-button {

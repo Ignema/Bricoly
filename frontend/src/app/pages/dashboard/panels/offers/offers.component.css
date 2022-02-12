@@ -4,6 +4,11 @@
     align-items: center;
 }
 
+.dashboard-offers div {
+    display: flex;
+    align-items: center;
+}
+
 .dashboard-offers h1 {
     font-size: 4rem;
     font-family: Mina;
@@ -11,6 +16,30 @@
     color: var(--color-primary);
     margin-top: 2rem;
 }
+
+.dashboard-offers button {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--color-primary);
+    color: white;
+    font-family: Mina;
+    font-size: 5rem;
+    font-weight: bolder;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 1rem;
+    transition: all .2s ease-in-out;
+}
+
+.dashboard-offers button:active {
+    transform: scale(0.9);
+}
+
 
 .dashboard-offers ul {
     list-style: none;

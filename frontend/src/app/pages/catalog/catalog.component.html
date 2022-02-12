@@ -4,18 +4,13 @@
     <div class="catalog-categories">
         <h1>Categories</h1>
         <ul>
-            <li class="catalog-categories-item">Plumber</li>
-            <li class="catalog-categories-item">Electrician</li>
-            <li class="catalog-categories-item">Mechanician</li>
-            <li class="catalog-categories-item">Tutor</li>
-            <li class="catalog-categories-item">Cleaner</li>
-            <li class="catalog-categories-item">Chef</li>
-            <li class="catalog-categories-item">Other</li>
+            <li *ngFor="let category of categories" class="catalog-categories-item">{{category.category_name}}</li>
         </ul>
         <p>Bricoly &copy; Copyright 2022</p>
     </div>
     <div class="catalog-offers">
-        <div class="catalog-offers-nav">
+        <!-- We will implement paging at a later date -->
+        <!-- <div class="catalog-offers-nav">
             <li>&lt;</li>
             <li>1</li>
             <li>2</li>
@@ -23,20 +18,9 @@
             <li>4</li>
             <li>...</li>
             <li>&gt;</li>
-        </div>
+        </div> -->
         <div class="catalog-offers-main">
-            <app-offer-card></app-offer-card>
-            <app-offer-card></app-offer-card>
-            <app-offer-card></app-offer-card>
-            <app-offer-card></app-offer-card>
-            <app-offer-card></app-offer-card>
-            <app-offer-card></app-offer-card>
-            <app-offer-card></app-offer-card>
-            <app-offer-card></app-offer-card>
-            <app-offer-card></app-offer-card>
-            <app-offer-card></app-offer-card>
-            <app-offer-card></app-offer-card>
-            <app-offer-card></app-offer-card>
+            <app-offer-card *ngFor="let offer of offers" [offer]="offer"></app-offer-card>
         </div>
     </div>
 </div>

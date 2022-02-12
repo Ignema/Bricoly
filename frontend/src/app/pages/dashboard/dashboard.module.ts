@@ -7,6 +7,7 @@ import { OffersComponent } from './panels/offers/offers.component';
 import { JobsComponent } from './panels/jobs/jobs.component';
 import { OfferItemComponent } from './components/offer-item/offer-item.component';
 import { JobItemComponent } from './components/job-item/job-item.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { JobItemComponent } from './components/job-item/job-item.component';
     OffersComponent,
     JobsComponent,
     OfferItemComponent,
-    JobItemComponent
+    JobItemComponent,
+    ModalComponent
   ],
   imports: [
     CommonModule

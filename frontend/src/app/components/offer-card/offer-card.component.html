@@ -1,8 +1,8 @@
-<a routerLink="/offer">
+<a [routerLink]="['/offer']" [state]="{data: offer}">
     <div class="offer-card">
-        <p class="offer-card-name">Offer Name</p>
+        <p class="offer-card-name">{{offer.offer_name}}</p>
         <img class="offer-card-image" src="assets/icons/user.svg" alt="Provider Picture">
-        <p class="offer-card-provider">Provider Name</p>
-        <p class="offer-card-price">Price</p>
+        <p class="offer-card-provider">{{offer.provider_name}}</p>
+        <p class="offer-card-price">{{offer.price}}</p>
     </div>
 </a>

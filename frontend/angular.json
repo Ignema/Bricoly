@@ -29,7 +29,8 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/ngx-simple-modal/styles/simple-modal.css"
             ],
             "scripts": [],
             "serviceWorker": true,

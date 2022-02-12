@@ -72,7 +72,7 @@
     width: 15rem;
     height: 4rem;
     border: none;
-    border-radius: 13px;
+    border-radius: 40px;
     font-family: Nunito;
     font-size: 1.5rem;
     color: var(--dark-text);
@@ -111,7 +111,7 @@
 .dashboard-profile-lower-skills div input {
     height: 4rem;
     border: none;
-    border-radius: 13px;
+    border-radius: 40px;
     font-family: Nunito;
     font-size: 1.5rem;
     color: var(--dark-text);
